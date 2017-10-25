@@ -14,6 +14,7 @@
         <result column="gender" jdbcType="CHAR" property="gender" />
         <result column="email" jdbcType="VARCHAR" property="email" />
         <result column="d_id" jdbcType="INTEGER" property="dId" />
+        <result column="money" jdbcType="INTEGER" property="money" />
         <!-- 指定联合查询出的部门字段的封装 -->
         <association property="department" javaType="com.tan.crud.bean.Department">
             <id column="dept_id" property="deptId"/>
@@ -251,4 +252,10 @@
       d_id = #{dId,jdbcType=INTEGER}
     where emp_id = #{empId,jdbcType=INTEGER}
   </update>
+
+    <update id="updateByMoney" parameterType="com.tan.crud.bean.Employee">
+        update tbl_emp
+        set money = #{qian,jdbcType=INTEGER}
+        where emp_id = #{empId,jdbcType=INTEGER}
+    </update>
 </mapper>

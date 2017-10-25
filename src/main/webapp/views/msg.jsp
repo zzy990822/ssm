@@ -227,11 +227,18 @@
                 .append($("<span></span>").addClass("glyphicon glyphicon-pencil")).append("编辑");
             //为编辑按钮添加一个自定义的属性，来表示当前员工id
             editBtn.attr("edit-id",item.empId);
+
             var delBtn =  $("<button></button>").addClass("btn btn-danger btn-sm delete_btn")
                 .append($("<span></span>").addClass("glyphicon glyphicon-trash")).append("删除");
             //为删除按钮添加一个自定义的属性来表示当前删除的员工id
             delBtn.attr("del-id",item.empId);
-            var btnTd = $("<td></td>").addClass("text-center").append(editBtn).append(" ").append(delBtn);
+
+            var payBtn =  $("<button></button>").addClass("btn btn-success btn-sm pay_btn")
+                .append($("<span></span>").addClass("glyphicon glyphicon-jpy")).append("扣款");
+            //为扣款按钮添加一个自定义的属性来表示扣除当前员工的钱
+            payBtn.attr("pay-id",item.empId);
+
+            var btnTd = $("<td></td>").addClass("text-center").append(editBtn).append(' ').append(delBtn).append(' ').append(payBtn);
             //var delBtn =
             //append方法执行完成以后还是返回原来的元素
             $("<tr></tr>").append(checkBoxTd)

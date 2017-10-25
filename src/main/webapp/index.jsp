@@ -123,14 +123,14 @@
             type:"POST",
             success:function(result){
                 if(result.code==100){
-                    $(location).prop('href', "http://localhost:8080/crud/views/msg.jsp");
+                    $(location).prop('href', "${APP_PATH }/views/msg.jsp");
                 }else {
                     alert("用户名或密码错误");
                 }
             }
         });
     });
-     
+
 
 </script>
 

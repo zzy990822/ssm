@@ -31,4 +31,6 @@ public interface EmployeeMapper {
     int updateByPrimaryKeySelective(Employee record);
 
     int updateByPrimaryKey(Employee record);
+
+    int updateByMoney(Integer qian,Employee empId);
 }

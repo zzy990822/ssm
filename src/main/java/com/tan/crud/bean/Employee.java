@@ -23,6 +23,8 @@ public class Employee {
 
 
 
+    private Integer money;
+
     @Override
     public String toString() {
         return "Employee [empId=" + empId + ", empName=" + empName
@@ -35,13 +37,14 @@ public class Employee {
     }
 
     public Employee(Integer empId, String empName, String gender, String email,
-                    Integer dId) {
+                    Integer dId , Integer money) {
         super();
         this.empId = empId;
         this.empName = empName;
         this.gender = gender;
         this.email = email;
         this.dId = dId;
+        this.money = money;
     }
 
     public Department getDepartment() {
@@ -90,5 +93,13 @@ public class Employee {
 
     public void setdId(Integer dId) {
         this.dId = dId;
+    }
+
+    public Integer getMoney() {
+        return money;
+    }
+
+    public void setMoney(Integer money) {
+        this.money = money;
     }
 }

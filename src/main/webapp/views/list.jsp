@@ -62,6 +62,10 @@
                                 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 删除
                             </button>
+                            <button class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-jpy" aria-hidden="true"></span>
+                                扣款
+                            </button>
                         </th>
                     </tr>
                 </c:forEach>
